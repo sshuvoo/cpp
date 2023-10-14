@@ -1,7 +1,5 @@
 // Modified Euler
-#include <cmath>
-#include <iomanip>
-#include <iostream>
+#include <bits/stdc++.h>
 using namespace std;
 
 #define f(x, y) (1 + x * y)  // f(x,y) = (x - y) / 2
