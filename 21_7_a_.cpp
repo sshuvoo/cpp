@@ -2,7 +2,7 @@
 using namespace std;
 
 int main() {
-    cout << fixed << setprecision(6);
+    cout << fixed << setprecision(3);
     int m, n = 2;
     cout << "\nEnter the number of points\n";
     cin >> m;
@@ -24,7 +24,7 @@ int main() {
         // calculate the last element of the augmented matrix in a row
         A[i][n + 1] = 0;
         for (int k = 0; k < m; k++) {
-            A[i][n + 1] = A[i][n + 1] + pow(P[k], i) * Q[k];  // yi, xiyi, xi2yi
+            A[i][n + 1] +=  pow(P[k], i) * Q[k];  // yi, xiyi, xi2yi
         }
     }
 
@@ -41,7 +41,7 @@ int main() {
             }
         }
     }
-    // Do elimentary row operatuion
+    // Do elimentary row operation
     for (int k = 0; k < n - 1; k++) {
         for (int i = k + 1; i < n; i++) {
             t = A[i][k] / A[k][k];
@@ -59,10 +59,10 @@ int main() {
         X[i] = X[i] / A[i][i];
     }
     cout << "\nThe value of the coefficients are : \n";
-    for (int i = 0; i <= n; i++) {
+    for (int i = 0; i < n; i++) {
         cout << "x" << i + 1 << " = " << X[i] << endl;
     }
     cout << "\nThe requied polynomial is : \n";
-    cout << "y = " << X[0] << " + " << X[1] << "x + " << X[2] << "x^2";
+    cout << "y = " << X[0] << " + " << X[1] << " x + " << X[2] << " x^2";
     return 0;
 }

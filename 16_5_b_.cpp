@@ -26,6 +26,6 @@ int main() {
         x[i + 1] = x[i] + h;
         y[i + 1] = y[i] + (h / 2) * (f(x[i], y[i]) + f(x[i + 1], y1[i + 1]));
     }
-    cout << "y(" << x[n] << ") = " << y[n] << endl;
+    cout << "y(" << x[n] << ") = " << y[n];
     return 0;
 }

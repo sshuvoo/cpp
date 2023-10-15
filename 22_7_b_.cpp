@@ -51,7 +51,7 @@ int main() {
             double t = B[k][i] / B[i][i];
             for (j = 0; j <= n; j++) B[k][j] = B[k][j] - t * B[i][j];
         }
-    cout << "\nafter Elementary matrix " << endl;
+    cout << "\nAfter Elementary matrix " << endl;
     for (i = 0; i < n; i++) {
         for (j = 0; j < n + 1; j++) cout << B[i][j] << setw(10);
         cout << "\n";
